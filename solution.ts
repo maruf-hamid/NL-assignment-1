@@ -19,3 +19,11 @@ function processInput (value : string | number | boolean) {
         return "Inactive";
     };
 }
+
+
+function formatCoordinate (coordinate : readonly [number, number, string]){
+    const latitude = coordinate[0];
+    const longitude = coordinate[1];
+    const location = coordinate[2];
+    return `Location: ${location} (${latitude}, ${longitude})`;
+};
