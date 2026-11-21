@@ -34,3 +34,14 @@ function concatenateArrays<T> (...arrays : T[][]) : T[] {
 }
 
 
+interface Course {
+    title : string,
+    students : number,
+    isPublished : boolean,
+}
+
+function getPopularCourses (courses : Course[], ministudens : number) {
+    const popularCourse = courses.filter((course) => 
+        course.students >= ministudens && course.isPublished=== true);
+    return popularCourse;
+}
