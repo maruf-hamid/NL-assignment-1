@@ -26,4 +26,11 @@ function formatCoordinate (coordinate : readonly [number, number, string]){
     const longitude = coordinate[1];
     const location = coordinate[2];
     return `Location: ${location} (${latitude}, ${longitude})`;
-};
+}
+
+
+function concatenateArrays<T> (...arrays : T[][]) : T[] {
+    return arrays.flat();
+}
+
+
