@@ -45,3 +45,9 @@ function getPopularCourses (courses : Course[], ministudens : number) {
         course.students >= ministudens && course.isPublished=== true);
     return popularCourse;
 }
+
+
+function pluckValues<T, K extends keyof T>(items: T[], key: K ): T[K][] {
+    const values = items.map((item) => item[key])
+    return values;
+}
